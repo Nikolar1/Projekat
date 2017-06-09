@@ -120,6 +120,7 @@ int main(int argc, const char * argv[]) {
     else{
       status = loginekran();
     }
+    fclose(f);
     int izbor = 0;
     if(status=0){
       izbor = meniradnik();
