@@ -13,10 +13,9 @@
 #include <stdlib.h>
 
 typedef struct gorivo{
-    int ID, Akcija;
-    float Cena;
+    int ID;
+    float Cena, Akcija, Stanje;
     char Ime[20];
-    struct gorivo* Sledeci;
-}Gorivo;
+}StanjeGoriva;
 
 #endif /* Pumpa_h */
