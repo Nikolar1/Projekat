@@ -15,26 +15,6 @@ int sesija;
 char user[STR_LEN];
 char password[STR_LEN];
 
-/*int meni()
-{
-    int izbor;
-    do{
-        printf("Izaberite opciju:\n");
-        printf("\t 1. Dodaj novog radnika.\n");
-        printf("\t 2. Daj otkaz radniku\n");
-        printf("\t 3. Proglasi radnika za sefa\n");
-        printf("\t 4. Dodaj novog sefa\n");
-        printf("\t 5. Ukloni sefa\n");
-        printf("\t 6. Ispisi statistiku svih radnika\n");
-        printf("\t 7. Dodaj gorivo (TNG/BMB 95/Evrodizel)\n");
-        printf("\t 8. Promeni cenu goriva\n");
-        printf("\t 9. Dodaj akciju na gorivo\n");
-        printf("\t10. Prodaj gorivo\n");
-        scanf("%i",&izbor);
-    }while(izbor<1 || izbor>16);
-    return izbor;
-}*/
-
 void Welcome()
 {
     printf("\tDobrdosli. Program je uspesno pokrenut po prvi put./n");
