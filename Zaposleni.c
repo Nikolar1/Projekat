@@ -147,3 +147,45 @@ void proglasSefa()
   }
   printf("\nKraj rada funkcije.\n")
 }
+
+void ispisiZaposlenog(zaposleni zap)
+{
+  FILE *f = fopen(ST_NAZIV, "rb");
+  fseek(f,0,SEEK_SET);
+  while(feof(f)!=0)
+  {
+    fread(&temp,sizeof(statusi),1,f);
+    if(statusi.brStatus==zap.idStatus)
+    {
+      printf("\nZaposleni ID broja: %i je %s:\n",zap.idBroj,statusi.status);
+      break;
+    }
+  }
+
+  printf("\tIme:\n ");
+  printf("\n%s",&zap.ime);
+
+  printf("\tPrezime:\n");
+  printf("\n%s",&zap.prezime);
+
+  printf("\tKosristnicko ime:\n");
+  printf("\n%s",&zap.username);
+
+  printf("\tPassword:\n");
+  printf("\n%s",&zap.password);
+
+  printf("\n\n");
+}
+
+void ispisiZaposlene()
+{
+  FILE * f = fopen(ZAP_NAZIV, "rb");
+  fseek(f,0,SEEK_SET);
+  zaposleni temp;
+  while(feof(f)!=0)
+  {
+    fread(&temp,sizeof(zaposleni),1,f);
+    ispisiZaposlenog(temp);
+  };
+  }
+}
