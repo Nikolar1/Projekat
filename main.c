@@ -40,6 +40,7 @@ void Welcome()
     printf("\tDobrdosli. Program je uspesno pokrenut po prvi put./n");
     printf("\tUnesite prvog korisnika / administratora.\n");
     unesiSefa();
+    napstatuse()
 }
 
 
