@@ -42,8 +42,10 @@ void napstatuse(){
   statusi temp1;
   temp1.brStatus = 0;
   temp1.status[] = "Radnik";
+  fwrite(temp1,sizeof(statusi),1,f1);
   temp1.brStatus = 1;
   temp1.status[] = "Sef";
+  fwrite(temp1,sizeof(statusi),1,f1);
   temp1.brStatus = 2;
   temp1.status[] = "Obrisan";
   fwrite(temp1,sizeof(statusi),1,f1);
