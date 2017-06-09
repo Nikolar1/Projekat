@@ -59,10 +59,10 @@ int loginekran()
     zaposleni temp;
     while(fread(temp,sizeof(zaposleni),1,f)!=NULL){
       fread(temp,sizeof(zaposleni),1,f)
-      if (temp.username[]==user[])
+      if (strcmp(temp.username,user) == 0)
       {
         i=1;
-        if(temp.password[]==password[]){
+        if(strcmp(temp.password,password) ==0){
           sesija = temp.idStatus;
         }
       }
