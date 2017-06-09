@@ -66,7 +66,7 @@ int menisef(){
       printf("\t 5. Ukloni sefa\n");
       printf("\t 6. Ispisi statistiku svih radnika\n");
       scanf("%i",&izbor);
-  }while(izbor<1 || izbor>10);
+  }while(izbor<1 || izbor>6);
   return izbor;
 }
 
