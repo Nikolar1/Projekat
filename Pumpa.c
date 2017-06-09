@@ -3,20 +3,16 @@
 //  BPumpa_ProjektniZad
 //
 //  Created by Milos,Nikola on 09.06.17.
-//  Copyright © 2017 Milos Ancevski. All rights reserved.
+//  Copyright © 2017 Nikola Radojcic. All rights reserved.
 //
 
 #include "Pumpa.h"
 #define MAX_PROC 100.0
 
-<<<<<<< HEAD
-
 void PromeniCenu(Gorivo* p){
-=======
 stanjegoriva Dizel, Benzin, TNG;
 
 void PromeniCenu(stanjegoriva* p){
->>>>>>> refs/remotes/origin/milos_branch
     printf("\nStara cena goriva je: %f.\n\nUnesite novu cenu: ",p->Cena);
     scanf("%f",&p->Cena);
     printf("\nCena je uspesno izmenjena.\n");

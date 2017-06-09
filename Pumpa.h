@@ -3,7 +3,7 @@
 //  BPumpa_ProjektniZad
 //
 //  Created by Milos,Nikola on 09.06.17.
-//  Copyright © 2017 Milos Ancevski. All rights reserved.
+//  Copyright © 2017 Nikola Radojcic. All rights reserved.
 //
 
 #ifndef Pumpa_h
