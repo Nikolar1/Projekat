@@ -15,7 +15,7 @@ int sesija;
 char user[STR_LEN];
 char password[STR_LEN];
 
-int meni()
+/*int meni()
 {
     int izbor;
     do{
@@ -33,14 +33,16 @@ int meni()
         scanf("%i",&izbor);
     }while(izbor<1 || izbor>16);
     return izbor;
-}
+}*/
 
 void Welcome()
 {
     printf("\tDobrdosli. Program je uspesno pokrenut po prvi put./n");
     printf("\tUnesite prvog korisnika / administratora.\n");
-    
+
 }
+
+
 
 int loginekran()
 {
@@ -49,14 +51,93 @@ int loginekran()
     scanf("%s",&user);
     printf("password:\n\t");
     scanf("%s",&password);
-    FILE * f = fopen(ZAP_NAZIV, ")
+    FILE * f = fopen(ZAP_NAZIV, "wb+")
     return sesija;
 }
 
+int menisef(){
+  int izbor;
+  do{
+      printf("Izaberite opciju:\n");
+      printf("\t 1. Dodaj novog radnika.\n");
+      printf("\t 2. Daj otkaz radniku\n");
+      printf("\t 3. Proglasi radnika za sefa\n");
+      printf("\t 4. Dodaj novog sefa\n");
+      printf("\t 5. Ukloni sefa\n");
+      printf("\t 6. Ispisi statistiku svih radnika\n");
+      scanf("%i",&izbor);
+  }while(izbor<1 || izbor>10);
+  return izbor;
+}
 
-          
+int meniradnik(){
+  int izbor;
+  do{
+      printf("Izaberite opciju:\n");
+      printf("\t 1. Registrujte gorivo TNG\n");
+      printf("\t 2. Registrujte gorivo Dizel.\n");
+      printf("\t 3. Registrujte gorivo Benzin\n");
+      printf("\t 4. Promeni cenu goriva TNG\n");
+      printf("\t 5. Promeni cenu goriva Dizel\n");
+      printf("\t 6. Promeni cenu goriva Benzin\n");
+      printf("\t 7. Dodaj akciju na gorivo\n");
+      printf("\t10. Prodaj gorivo\n");
+      scanf("%i",&izbor);
+  }while(izbor<1 || izbor>10);
+  return izbor;
+}
+
+
 int main(int argc, const char * argv[]) {
-    
-    
+    int status = loginekran();
+    int izbor = 0;
+    if(status=0){
+      izbor = meniradnik();
+      switch (izbor) {
+        case 1:
+        break;
+        case 2:
+        break;
+        case 3:
+        break;
+        case 4:
+        break;
+        case 5:
+        break;
+        case 6:
+        break;
+        case 7:
+        break;
+        case 8:
+        break;
+        case 9:
+        break;
+        case 10:
+        break;
+      }
+    }
+    else if(status=1)
+    {
+      izbor = menisef();
+      switch (izbor) {
+        case 1:
+        break;
+        case 2:
+        break;
+        case 3:
+        break;
+        case 4:
+        break;
+        case 5:
+        break;
+        case 6:
+        break;
+      }
+    }
+    else
+    {
+      printf("\t Niste u mogucnosti da pristupite opcijama dobili ste otkaz\n");
+    }
+
     return 0;
 }
