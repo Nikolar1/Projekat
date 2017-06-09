@@ -9,14 +9,14 @@
 #ifndef Pumpa_h
 #define Pumpa_h
 #define GR_NAZIV "gorivo.dat"
-
+#define STR_LEN 20
 #include <stdio.h>
 #include <stdlib.h>
 
 typedef struct Stanjegoriva{
     int ID;
     float Cena;
-    char Ime[20];
+    char Ime[STR_LEN];
     float akcija;
     float stanje;
 }stanjegoriva;
