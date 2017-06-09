@@ -45,5 +45,6 @@ void unesiZaposlenog();
 void napstatuse();
 void unesiSefa();
 void dajOtkaz();
+void proglasSefa();
 
 #endif /* Zaposleni_h */
