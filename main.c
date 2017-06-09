@@ -26,12 +26,38 @@ void Welcome()
 
 int loginekran()
 {
+  FILE * f = fopen(ZAP_NAZIV, "rb");
+  sesija = 3;
+  while(sesija>2){
+    int i = 0
     printf("Unesite korisnicko ime i lozinku:\n");
     printf("username:\n\t");
     scanf("%s",&user);
     printf("password:\n\t");
     scanf("%s",&password);
+<<<<<<< HEAD
     FILE * f = fopen(ZAP_NAZIV, "rb");
+=======
+    zaposleni temp;
+    while(fread(temp,sizeof(zaposleni),1,f)!=NULL){
+      fread(temp,sizeof(zaposleni),1,f)
+      if (temp.username[]==user[])
+      {
+        i=1;
+        if(temp.password[]==password[]){
+          sesija = temp.idStatus;
+        }
+      }
+    }
+    if (i==1)
+    {
+      printf("Pogresna lozinka");
+    }
+    else{
+      printf("Nepostojece korisnicko ime");
+    }
+  }
+>>>>>>> origin/aleksa_branch
     return sesija;
 }
 
