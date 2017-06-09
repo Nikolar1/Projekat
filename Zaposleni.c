@@ -110,6 +110,8 @@ void dajOtkaz()
     {
       temp.idStatus=3;
       fwrite(temp1,sizeof(statusiZaposlenih),1,f1);
+      fseek(f,0-sizeof(zaposleni),SEEK_CUR);
+      fwrite(&temp,sizeof(zaposleni),1,f);
       printf("Zaposlenom sa ID brojem %i uspesno je dat otkaz.\n",tempid);
       break;
     }
