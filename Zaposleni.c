@@ -23,6 +23,12 @@ void unesiZaposlenog()
     printf("\tIdentifikacioni broj zaposlenog (jedinstven ceo broj) \n");
     scanf("\n%s",&temp.idBroj);
     
+    printf("\tKosristnicko ime zaposlenog:\n");
+    scanf("\n%s",&temp.username);
+    
+    printf("\tPassword zaposlenog:\n");
+    scanf("\n%s",&temp.password);
+    
     temp.Zaposlenje = time(NULL);
     //c_time_string = ctime(&current_time);
     
@@ -45,6 +51,12 @@ void unesiSefa()
     printf("\tIdentifikacioni broj sefa (jedinstven ceo broj) \n");
     scanf("\n%s",&temp.idBroj);
     
+    printf("\tKosristnicko ime sefa:\n");
+    scanf("\n%s",&temp.username);
+    
+    printf("\tPassword sefa:\n");
+    scanf("\n%s",&temp.password);
+    
     temp.Zaposlenje = time(NULL);
     //c_time_string = ctime(&current_time);
     
@@ -52,4 +64,7 @@ void unesiSefa()
     
     fwrite(&temp, sizeof(zaposleni), 1, f);
 }
+
+
+
 

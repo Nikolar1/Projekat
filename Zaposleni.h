@@ -21,6 +21,8 @@ typedef struct Zaposleni
     int idBroj;
     char ime[STR_LEN];
     char prezime[STR_LEN];
+    char username[STR_LEN];
+    char password[STR_LEN];
     time_t Zaposlenje;
     time_t Otkaz;
     int idStatus;
