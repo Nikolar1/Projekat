@@ -39,7 +39,7 @@ void Welcome()
 {
     printf("\tDobrdosli. Program je uspesno pokrenut po prvi put./n");
     printf("\tUnesite prvog korisnika / administratora.\n");
-    
+
 }
 
 int loginekran()
@@ -49,14 +49,14 @@ int loginekran()
     scanf("%s",&user);
     printf("password:\n\t");
     scanf("%s",&password);
-    FILE * f = fopen(ZAP_NAZIV, ")
+    FILE * f = fopen(ZAP_NAZIV, "rb");
     return sesija;
 }
 
 
-          
+
 int main(int argc, const char * argv[]) {
-    
-    
+
+
     return 0;
 }
