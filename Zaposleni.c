@@ -22,6 +22,7 @@ void unesiZaposlenog()
 
     printf("\tIdentifikacioni broj zaposlenog (jedinstven ceo broj) \n");
     scanf("\n%s",&temp.idBroj);
+    temp1.idBroj = temp.idBroj;
 
     printf("\tKosristnicko ime zaposlenog:\n");
     scanf("\n%s",&temp.username);
@@ -30,9 +31,11 @@ void unesiZaposlenog()
     scanf("\n%s",&temp.password);
 
     temp.Zaposlenje = time(NULL);
+    temp1.vremePromene = time(NULL);
     //c_time_string = ctime(&current_time);
 
     temp.idStatus = 0;
+    temp1.idStatus = 0;
 
     fwrite(&temp, sizeof(zaposleni), 1, f);
 }
@@ -55,7 +58,9 @@ void napstatuse(){
 void unesiSefa()
 {
     FILE * f = fopen(ZAP_NAZIV, "a+b");
+    FILE *f1 = fopen(STZAP_NAZIV, "a+b");
     zaposleni temp;
+    statusiZaposlenih temp1;
 
     printf("\tIme sefa:\n ");
     scanf("\n%s",&temp.ime);
@@ -65,6 +70,7 @@ void unesiSefa()
 
     printf("\tIdentifikacioni broj sefa (jedinstven ceo broj) \n");
     scanf("\n%s",&temp.idBroj);
+    temp1.idBroj = temp.idBroj;
 
     printf("\tKosristnicko ime sefa:\n");
     scanf("\n%s",&temp.username);
@@ -73,9 +79,11 @@ void unesiSefa()
     scanf("\n%s",&temp.password);
 
     temp.Zaposlenje = time(NULL);
+    temp1.vremePromene = time(NULL);
     //c_time_string = ctime(&current_time);
 
     temp.idStatus = 1;
+    temp1.idStatus = 1;
 
     fwrite(&temp, sizeof(zaposleni), 1, f);
 }
