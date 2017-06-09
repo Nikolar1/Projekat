@@ -46,12 +46,34 @@ void Welcome()
 
 int loginekran()
 {
+  FILE * f = fopen(ZAP_NAZIV, "rb");
+  sesija = 3;
+  while(sesija>2){
+    int i = 0
     printf("Unesite korisnicko ime i lozinku:\n");
     printf("username:\n\t");
     scanf("%s",&user);
     printf("password:\n\t");
     scanf("%s",&password);
-    FILE * f = fopen(ZAP_NAZIV, "wb+")
+    zaposleni temp;
+    while(fread(temp,sizeof(zaposleni),1,f)!=NULL){
+      fread(temp,sizeof(zaposleni),1,f)
+      if (temp.username[]==user[])
+      {
+        i=1;
+        if(temp.password[]==password[]){
+          sesija = temp.idStatus;
+        }
+      }
+    }
+    if (i==1)
+    {
+      printf("Pogresna lozinka");
+    }
+    else{
+      printf("Nepostojece korisnicko ime");
+    }
+  }
     return sesija;
 }
 
@@ -86,7 +108,6 @@ int meniradnik(){
   }while(izbor<1 || izbor>10);
   return izbor;
 }
-
 
 int main(int argc, const char * argv[]) {
     int status = loginekran();
@@ -138,6 +159,7 @@ int main(int argc, const char * argv[]) {
     {
       printf("\t Niste u mogucnosti da pristupite opcijama dobili ste otkaz\n");
     }
+>>>>>>> refs/remotes/origin/master
 
     return 0;
 }

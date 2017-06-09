@@ -13,4 +13,8 @@
 #include <time.h>
 #include <stdlib.h>
 
+
+void ispisiDatum(time_t mytime);
+void ispisiVreme(time_t mytime);
+
 #endif /* Vreme_h */
