@@ -38,6 +38,7 @@ void unesiZaposlenog()
     temp1.idStatus = 0;
 
     fwrite(&temp, sizeof(zaposleni), 1, f);
+    fwrite(&temp1, sizeof(statusiZaposlenih),1,f1);
 }
 
 void napstatuse(){
@@ -86,4 +87,32 @@ void unesiSefa()
     temp1.idStatus = 1;
 
     fwrite(&temp, sizeof(zaposleni), 1, f);
+    fwrite(&temp1, sizeof(statusiZaposlenih),1,f1);
+}
+
+void dajOtkaz()
+{
+  FILE * f = fopen(ZAP_NAZIV, "r+b");
+  FILE *f1 = fopen(STZAP_NAZIV, "a+b");
+  printf("\nUnesite id zaposlenog kom zelite da date otkaz:\n");
+  int tempid;
+  scanf("%i",&tempid);
+  fseek(f,0,SEEK_SET);
+  zaposleni temp;
+  statusiZaposlenih temp1;
+  temp1.idStatus = 3;
+  temp1.idBroj = tempid;
+  temp1.vremePromene = time(NULL);
+  while(feof(f)!=0)
+  {
+    fread(&temp,sizeof(zaposleni),1,f);
+    if(tempid == temp.idBroj)
+    {
+      temp.idStatus=3;
+      fwrite(temp1,sizeof(statusiZaposlenih),1,f1);
+      printf("Zaposlenom sa ID brojem %i uspesno je dat otkaz.\n",tempid);
+      break;
+    }
+  }
+  printf("\nKraj rada funkcije.\n")
 }
