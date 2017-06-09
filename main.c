@@ -39,7 +39,7 @@ void Welcome()
 {
     printf("\tDobrdosli. Program je uspesno pokrenut po prvi put./n");
     printf("\tUnesite prvog korisnika / administratora.\n");
-
+    unesiSefa();
 }
 
 
@@ -110,7 +110,16 @@ int meniradnik(){
 }
 
 int main(int argc, const char * argv[]) {
-    int status = loginekran();
+    FILE *f=fopen(ZAP_NAZIV,rb);
+    zaposleni temporary;
+    int status;
+    if(fread(temporary,sizeof(zaposleni),1,f)==NULL){
+      Welcome();
+      status = 1;
+    }
+    else{
+      status = loginekran();
+    }
     int izbor = 0;
     if(status=0){
       izbor = meniradnik();
@@ -159,7 +168,6 @@ int main(int argc, const char * argv[]) {
     {
       printf("\t Niste u mogucnosti da pristupite opcijama dobili ste otkaz\n");
     }
->>>>>>> refs/remotes/origin/master
 
     return 0;
 }
