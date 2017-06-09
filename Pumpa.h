@@ -13,6 +13,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+typedef struct gorivo{
+    int ID;
+    float Cena, Akcija, Stanje;
+    char Ime[20];
+}StanjeGoriva;
+
 typedef struct Stanjegoriva{
     int ID;
     float Cena;

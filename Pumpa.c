@@ -11,7 +11,14 @@
 
 void PromeniCenu(Gorivo* p){
     printf("\nStara cena goriva je: %f.\n\nUnesite novu cenu: ",p->Cena);
-    scanf("")
+    scanf("%f",&p->Cena);
+    printf("\nCena je uspesno izmenjena.\n");
+}
+
+void DodajAkciju(Gorivo* p){
+    printf("\nZa koliko procenata zelite da snizite zenu goriva? ");
+    scanf("%f",&p->Akcija);
+    printf()
 }
 
 void reggorivo(){
