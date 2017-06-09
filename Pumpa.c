@@ -17,16 +17,15 @@ void PromeniCenu(Gorivo* p){
 void reggorivo(){
   printf("\tUnesite naziv novog goriva\n");
   stanjegoriva temp;
-  scanf("%s",temp.Ime[]);
-  printf("%s\n", );
+  scanf("%s",&temp.Ime[]);
   printf("\tIdentifikacioni broj goriva (jedinstven ceo broj) \n");
-  scanf("\n%s",&temp.ID);
+  scanf("%d",&temp.ID);
   printf("\tUnesite cenu goriva \n");
-  scanf("\n%s",&temp.Cena);
+  scanf("%f",&temp.Cena);
   printf("\tUnesite stanje goriva \n");
-  scanf("\n%s",&temp.stanje);
+  scanf("%f",&temp.stanje);
   printf("\tUnesite akciju na gorivo \n");
-  scanf("\n%s",&temp.akcija);
+  scanf("%f",&temp.akcija);
   FILE *f = fopen(GR_NAZIV,"a+b");
   fwrite(temp,sizeof(stanjegoriva),1,f);
   fclose(f);

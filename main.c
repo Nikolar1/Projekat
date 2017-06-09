@@ -20,7 +20,9 @@ void Welcome()
     printf("\tDobrdosli. Program je uspesno pokrenut po prvi put./n");
     printf("\tUnesite prvog korisnika / administratora.\n");
     unesiSefa();
-    napstatuse()
+    printf("\tUnesite prvu vrstu goriva.\n");
+    reggorivo();
+    napstatuse();
 }
 
 
@@ -77,16 +79,12 @@ int meniradnik(){
   int izbor;
   do{
       printf("Izaberite opciju:\n");
-      printf("\t 1. Registrujte gorivo TNG\n");
-      printf("\t 2. Registrujte gorivo Dizel.\n");
-      printf("\t 3. Registrujte gorivo Benzin\n");
-      printf("\t 4. Promeni cenu goriva TNG\n");
-      printf("\t 5. Promeni cenu goriva Dizel\n");
-      printf("\t 6. Promeni cenu goriva Benzin\n");
-      printf("\t 7. Dodaj akciju na gorivo\n");
-      printf("\t10. Prodaj gorivo\n");
+      printf("\t 1. Registrujte gorivo\n");
+      printf("\t 2. Promeni cenu goriva\n");
+      printf("\t 3. Dodaj akciju na gorivo\n");
+      printf("\t 4. Prodaj gorivo\n");
       scanf("%i",&izbor);
-  }while(izbor<1 || izbor>10);
+  }while(izbor<1 || izbor>4);
   return izbor;
 }
 
@@ -107,24 +105,13 @@ int main(int argc, const char * argv[]) {
       izbor = meniradnik();
       switch (izbor) {
         case 1:
+        reggorivo()
         break;
         case 2:
         break;
         case 3:
         break;
         case 4:
-        break;
-        case 5:
-        break;
-        case 6:
-        break;
-        case 7:
-        break;
-        case 8:
-        break;
-        case 9:
-        break;
-        case 10:
         break;
       }
     }
