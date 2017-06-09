@@ -2,8 +2,8 @@
 //  Pumpa.c
 //  BPumpa_ProjektniZad
 //
-//  Created by Milos on 09.06.17.
-//  Copyright © 2017 Milos Ancevski. All rights reserved.
+//  Created by Milos,Nikola on 09.06.17.
+//  Copyright © 2017 Nikola Radojci. All rights reserved.
 //
 
 #include "Pumpa.h"
