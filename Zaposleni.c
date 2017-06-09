@@ -38,27 +38,15 @@ void unesiZaposlenog()
 }
 
 void napstatuse(){
-  FILE *f = fopen(ZAP_NAZIV,"rb");
   FILE *f1 = fopen(ST_NAZIV,"wb");
-  Zaposleni temp;
-  Statusi temp1;
-  while(fread(temp,sizeof(Zaposleni),1,f)!= NULL){
-    fread(temp,sizeof(Zaposleni),1,f);
-    temp1.brStatus = temp.idBroj;
-    switch (temp.idStatus) {
-      case 0:
-      temp1.status[] = "Radnik";
-      break;
-      case 1:
-      temp1.status[] = "Sef";
-      break;
-      case 2:
-      temp1.status[] = "Obrisan";
-      break;
-    }
-    fwrite(temp1,sizeof(Statusi),1,f1);
-  }
-  fclose(f);
+  statusi temp1;
+  temp1.brStatus = 0;
+  temp1.status[] = "Radnik";
+  temp1.brStatus = 1;
+  temp1.status[] = "Sef";
+  temp1.brStatus = 2;
+  temp1.status[] = "Obrisan";
+  fwrite(temp1,sizeof(statusi),1,f1);
   fclose(f1);
 }
 
