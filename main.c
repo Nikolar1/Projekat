@@ -83,8 +83,9 @@ int meniradnik(){
       printf("\t 2. Promeni cenu goriva\n");
       printf("\t 3. Dodaj akciju na gorivo\n");
       printf("\t 4. Prodaj gorivo\n");
+      printf("\t 5. Promeni stanje goriva\n");
       scanf("%i",&izbor);
-  }while(izbor<1 || izbor>4);
+  }while(izbor<1 || izbor>5);
   return izbor;
 }
 
@@ -112,6 +113,9 @@ int main(int argc, const char * argv[]) {
         case 3:
         break;
         case 4:
+        break;
+        case 5;
+        promenastanja()
         break;
       }
     }

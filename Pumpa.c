@@ -27,6 +27,31 @@ void reggorivo(){
   printf("\tUnesite akciju na gorivo \n");
   scanf("%f",&temp.akcija);
   FILE *f = fopen(GR_NAZIV,"a+b");
-  fwrite(temp,sizeof(stanjegoriva),1,f);
+  fwrite(&temp,sizeof(stanjegoriva),1,f);
   fclose(f);
+}
+
+void promenastanja(){
+  printf("\tUnesite naziv goriva kojem zelite da menjate stanje\n");
+  char naziv[STR_LEN];
+  scanf("%s",&naziv);
+  int temporary = 1;
+  stanjegoriva temp;
+  FILE *f = fopen(GR_NAZIV,"rb");
+  while (fread(&temp,sizeof(stanjegoriva),1,f)!=NULL){
+    fread(temp,sizeof(stanjegoriva),1,f);
+    if(strcmp(temp.ime,naziv)==0){
+      temporary=0;
+      break;
+    }
+  }
+  if(temporary==1){
+    printf("\tOdabrali ste nepostojece gorivo\n");
+  }
+  else{
+    printf("Unesite novo stanje goriva\n");
+    scanf("%f",temp.stanje);
+    fseek(f,0-sizeof(stanjegoriva),SEEK_CUR);
+    fwrite(&temp,sizeof(stanjegoriva),1,f);
+  }
 }
