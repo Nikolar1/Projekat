@@ -38,6 +38,7 @@ int loginekran()
     scanf("%s",&user);
     printf("password:\n\t");
     scanf("%s",&password);
+    FILE * f = fopen(ZAP_NAZIV, "rb");
     zaposleni temp;
     while(fread(temp,sizeof(zaposleni),1,f)!=NULL){
       fread(temp,sizeof(zaposleni),1,f)
@@ -141,6 +142,5 @@ int main(int argc, const char * argv[]) {
     {
       printf("\t Niste u mogucnosti da pristupite opcijama dobili ste otkaz\n");
     }
-
     return 0;
 }

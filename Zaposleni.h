@@ -41,4 +41,12 @@ typedef struct Statusi
     char status[STR_LEN];
 } statusi;
 
+void unesiZaposlenog();
+void napstatuse();
+void unesiSefa();
+void dajOtkaz();
+void proglasSefa();
+void ispisiZaposlenog(zaposleni zap);
+void ispisiZaposlene();
+
 #endif /* Zaposleni_h */
