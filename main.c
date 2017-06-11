@@ -15,6 +15,29 @@ int sesija;
 char user[STR_LEN];
 char password[STR_LEN];
 
+<<<<<<< HEAD
+=======
+/*int meni()
+{
+    int izbor;
+    do{
+        printf("Izaberite opciju:\n");
+        printf("\t 1. Dodaj novog radnika.\n");
+        printf("\t 2. Daj otkaz radniku\n");
+        printf("\t 3. Proglasi radnika za sefa\n");
+        printf("\t 4. Dodaj novog sefa\n");
+        printf("\t 5. Ukloni sefa\n");
+        printf("\t 6. Ispisi statistiku svih radnika\n");
+        printf("\t 7. Dodaj gorivo (TNG/BMB 95/Evrodizel)\n");
+        printf("\t 8. Promeni cenu goriva\n");
+        printf("\t 9. Dodaj akciju na gorivo\n");
+        printf("\t10. Prodaj gorivo\n");
+        scanf("%i",&izbor);
+    }while(izbor<1 || izbor>16);
+    return izbor;
+}*/
+
+>>>>>>> master
 void Welcome()
 {
     printf("\tDobrdosli. Program je uspesno pokrenut po prvi put./n");
@@ -35,7 +58,9 @@ int loginekran()
     scanf("%s",&user);
     printf("password:\n\t");
     scanf("%s",&password);
+<<<<<<< HEAD
     FILE * f = fopen(ZAP_NAZIV, "rb");
+<<<<<<< HEAD
     zaposleni temp;
     while(fread(temp,sizeof(zaposleni),1,f)!=NULL){
       fread(temp,sizeof(zaposleni),1,f)
@@ -55,6 +80,11 @@ int loginekran()
       printf("Nepostojece korisnicko ime");
     }
   }
+=======
+=======
+    FILE * f = fopen(ZAP_NAZIV, "wb+")
+>>>>>>> origin/master
+>>>>>>> master
     return sesija;
 }
 
@@ -69,6 +99,7 @@ int menisef(){
       printf("\t 5. Ukloni sefa\n");
       printf("\t 6. Ispisi statistiku svih radnika\n");
       scanf("%i",&izbor);
+<<<<<<< HEAD
   }while(izbor<1 || izbor>6);
   return izbor;
 }
@@ -102,6 +133,37 @@ int main(int argc, const char * argv[]) {
       status = loginekran();
     }
     fclose(f);
+=======
+  }while(izbor<1 || izbor>10);
+  return izbor;
+}
+
+int meniradnik(){
+  int izbor;
+  do{
+      printf("Izaberite opciju:\n");
+      printf("\t 1. Registrujte gorivo TNG\n");
+      printf("\t 2. Registrujte gorivo Dizel.\n");
+      printf("\t 3. Registrujte gorivo Benzin\n");
+      printf("\t 4. Promeni cenu goriva TNG\n");
+      printf("\t 5. Promeni cenu goriva Dizel\n");
+      printf("\t 6. Promeni cenu goriva Benzin\n");
+      printf("\t 7. Dodaj akciju na gorivo\n");
+      printf("\t10. Prodaj gorivo\n");
+      scanf("%i",&izbor);
+  }while(izbor<1 || izbor>10);
+  return izbor;
+}
+
+
+<<<<<<< HEAD
+
+int main(int argc, const char * argv[]) {
+
+=======
+int main(int argc, const char * argv[]) {
+    int status = loginekran();
+>>>>>>> master
     int izbor = 0;
     if(status=0){
       izbor = meniradnik();
@@ -150,5 +212,10 @@ int main(int argc, const char * argv[]) {
     {
       printf("\t Niste u mogucnosti da pristupite opcijama dobili ste otkaz\n");
     }
+<<<<<<< HEAD
+=======
+>>>>>>> origin/master
+
+>>>>>>> master
     return 0;
 }
