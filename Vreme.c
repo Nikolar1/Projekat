@@ -6,12 +6,12 @@
 //  Copyright © 2017 Aleksa Vujnic. All rights reserved.
 //
 
-#include "Vreme.h"
+#include "Vreme.h"  //Rastko
 
 void ispisiDatum(time_t mytime)
 {
     mytime = time(NULL);
-    printf(ctime(&mytime));
+    //printf(ctime(&mytime));
     struct tm *timeInfo;
     timeInfo = localtime(&mytime);
     
@@ -19,10 +19,10 @@ void ispisiDatum(time_t mytime)
 }
 
 
-void ispisiVreme(time_t mytime)
+void ispisiVreme(time_t mytime) //Rastko
 {
     mytime = time(NULL);
-    printf(ctime(&mytime));
+    //printf(ctime(&mytime));
     struct tm *timeInfo;
     timeInfo = localtime(&mytime);
     

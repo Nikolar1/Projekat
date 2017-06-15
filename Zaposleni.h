@@ -15,6 +15,8 @@
 #include <time.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include "Vreme.h"
 
 typedef struct Zaposleni
 {
@@ -40,5 +42,16 @@ typedef struct Statusi
     int brStatus;
     char status[STR_LEN];
 } statusi;
+
+void unesiZaposlenog();
+void unesiSefa();
+void dajOtkaz();
+void proglasSefa();
+void ukloniSefa();
+void ispisiZaposlenog(zaposleni);
+void ispisiZaposlene();
+void ispisiPromenu(statusiZaposlenih);
+void ispisiPromene();
+void inicijalizujStatus();
 
 #endif /* Zaposleni_h */
