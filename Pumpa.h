@@ -2,12 +2,13 @@
 //  Pumpa.h
 //  BPumpa_ProjektniZad
 //
-//  Created by Aleksa on 02.06.17.
-//  Copyright © 2017 Aleksa Vujnic. All rights reserved.
+//  Created by Milos,Nikola on 09.06.17.
+//  Copyright © 2017 Nikola Radojcic. All rights reserved.
 //
 
 #ifndef Pumpa_h
 #define Pumpa_h
+<<<<<<< HEAD
 
 #define STR_LEN 20
 #define GORIVO_NAZIV "gorivo.dat"
@@ -43,5 +44,20 @@ void ispisiGorivo(gorivo);
 void ispisiGoriva();
 void ispisiProdaju(prodaja);
 void ispisiProdaje();
+=======
+#define GR_NAZIV "gorivo.dat"
+#define STR_LEN 20
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+typedef struct Stanjegoriva{
+    int ID;
+    float Cena;
+    char Ime[STR_LEN];
+    float akcija;
+    float stanje;
+}stanjegoriva;
+>>>>>>> origin/master
 
 #endif /* Pumpa_h */

@@ -44,6 +44,7 @@ typedef struct Statusi
 } statusi;
 
 void unesiZaposlenog();
+<<<<<<< HEAD
 void unesiSefa();
 void dajOtkaz();
 void proglasSefa();
@@ -53,5 +54,13 @@ void ispisiZaposlene();
 void ispisiPromenu(statusiZaposlenih);
 void ispisiPromene();
 void inicijalizujStatus();
+=======
+void napstatuse();
+void unesiSefa();
+void dajOtkaz();
+void proglasSefa();
+void ispisiZaposlenog(zaposleni zap);
+void ispisiZaposlene();
+>>>>>>> origin/master
 
 #endif /* Zaposleni_h */
