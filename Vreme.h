@@ -9,12 +9,11 @@
 #ifndef Vreme_h
 #define Vreme_h
 
+#define STR_LEN 20
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>
 
-
-void ispisiDatum(time_t);
-void ispisiVreme(time_t);
+void UpisiVreme(char * vremestr);
 
 #endif /* Vreme_h */

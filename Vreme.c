@@ -6,26 +6,14 @@
 //  Copyright © 2017 Aleksa Vujnic. All rights reserved.
 //
 
-#include "Vreme.h"  //Rastko
+#include "Vreme.h" //Rastko
 
-void ispisiDatum(time_t mytime)
+
+void UpisiVreme(char * vremestr) //Rastko
 {
-    mytime = time(NULL);
-    //printf(ctime(&mytime));
-    struct tm *timeInfo;
-    timeInfo = localtime(&mytime);
-    
-    printf("Dan:  %i Mesec: %i Godina: %i\n", timeInfo->tm_wday, timeInfo->tm_mon, timeInfo->tm_year + 1900);
+    time_t current_time;
+    struct tm * time_info;
+    time(&current_time);
+    time_info = localtime(&current_time);
+    strftime(vremestr,STR_LEN*sizeof(char), "%X %x", time_info);
 }
-
-
-void ispisiVreme(time_t mytime) //Rastko
-{
-    mytime = time(NULL);
-    //printf(ctime(&mytime));
-    struct tm *timeInfo;
-    timeInfo = localtime(&mytime);
-    
-    printf("Sati: %i Minute: %i Sekunde: %i \n", timeInfo->tm_hour, timeInfo ->tm_min, timeInfo->tm_sec);
-}
-
